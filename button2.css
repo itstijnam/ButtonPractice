@@ -1,0 +1,128 @@
+.btn2, .btn3, .btn4, .btn5{
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border: 2px solid blue;
+    background-color: white;
+    border-radius: 10px;
+    color: blue;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn2::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: red;
+    z-index: -1;
+    border-radius: 10px;
+    transform: translateX(-90%);
+    transition: 1s all ease;
+}
+.btn2::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: red;
+    z-index: -1;
+    border-radius: 10px;
+    transform: translateX(90%);
+    transition: 1s all ease;
+}
+.btn2:hover::before{
+    transform: translateX(-40%);
+}
+.btn2:hover::after{
+    transform: translateX(40%);
+}
+.btn2:hover{
+    cursor: pointer;
+    color: white;
+    border-color: yellow;
+}
+.btn3{
+    color: white;
+    border-color: whitesmoke;
+}
+.btn3::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background-color: blue;
+    transform: translateX(-50%);
+    transition: 1s all ease;
+}
+.btn3::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+    transform: translateX(50%);
+    z-index: -1;
+    transition: 1s all ease;
+}
+.btn3:hover::after{
+    transform: translateX(100%);
+}
+.btn3:hover{
+    cursor: pointer;
+    color: yellowgreen;
+    border-color: yellowgreen
+}
+.btn3:hover::before{
+    transform: translateX(-100%);
+}
+
+.btn4::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: aqua;
+    border-radius: 10px;
+    z-index: -1;
+    transform: translateY(-30%);
+    transition: 1s all ease;
+}
+.btn4::after{
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform: translateY(40%);
+    transition: 1s all ease;
+    z-index: -1;
+}
+.btn4:hover::before{
+    transform: translateY(-100%);
+}
+.btn4:hover::after{
+    transform: translateY(100%);
+}
+.btn4:hover{
+    cursor: pointer;
+    color: red;
+    border-color: blue;
+}
